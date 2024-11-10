@@ -8,11 +8,14 @@ test.describe('QAuto Registration and Login Tests', () => {
     let registrationPage: RegistrationPage;
     let loginPage: LoginPage;
 
+
+
     test.beforeEach(async ({ page }) => {
         registrationPage = new RegistrationPage(page);
         loginPage = new LoginPage(page);
-        await registrationPage.navigate();
+        await page.goto('/');
     });
+
 
     test('Should validate "Name" field', async ({ page }) => {
         await registrationPage.clickSignUp();
