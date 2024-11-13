@@ -12,5 +12,10 @@
         "password": "short",
         "wrongEmail": "wrongemail@example.com",
         "wrongPassword": "wrongpassword"
+    },
+    "carDetails": {
+        "brand": "Ford",
+        "model": "Focus",
+        "mileage": "100"
     }
 }
