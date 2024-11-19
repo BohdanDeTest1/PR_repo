@@ -39,6 +39,9 @@ export default defineConfig({
   //===============================================
   use: {
     baseURL: process.env.BASE_URL || 'https://guest:welcome2qauto@qauto.forstudy.space',
+    headless: false,
+    screenshot: 'on',
+    video: 'retain-on-failure',
   },
   //===============================================
   /* Configure projects for major browsers */
