@@ -60,6 +60,10 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
+    {
+      name: 'ui-tests',
+      use: { browserName: 'chromium' },
+    },
     //=======================================
     {
       name: 'setup',
