@@ -5,7 +5,16 @@
         "strict": true,
         "esModuleInterop": true,
         "resolveJsonModule": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "paths": {
+            "pageObjects/*": [
+                "pageObjects/*"
+            ],
+            "fixtures/*": [
+                "fixtures/*"
+            ]
+        }
     },
     "include": [
         "tests/**/*.ts",

@@ -26,17 +26,21 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  // use: {
+  //   baseURL: process.env.BASE_URL || 'http://localhost:3000',
+  //   httpCredentials: {
+  //     username: process.env.HTTP_USERNAME || '',
+  //     password: process.env.HTTP_PASSWORD || '',
+  //   },
+  //   headless: true,
+  //   /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+  //   trace: 'on-first-retry'
+  // },
+  //===============================================
   use: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000',
-    httpCredentials: {
-      username: process.env.HTTP_USERNAME || '',
-      password: process.env.HTTP_PASSWORD || '',
-    },
-    headless: true,
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry'
+    baseURL: process.env.BASE_URL || 'https://guest:welcome2qauto@qauto.forstudy.space',
   },
-
+  //===============================================
   /* Configure projects for major browsers */
   projects: [
     {
@@ -53,7 +57,20 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
-
+    //=======================================
+    {
+      name: 'setup',
+      testMatch: /.*\.setup\.ts/,
+    },
+    {
+      name: 'garage-user',
+      use: {
+        storageState: 'playwright/.auth/user.json',
+        ...devices['Desktop Chrome'],
+      },
+      dependencies: ['setup'],
+    },
+    //=======================================
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
