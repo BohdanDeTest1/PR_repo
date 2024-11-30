@@ -2,9 +2,9 @@ name: Playwright For HW one
 
 on:
   push:
-    branches: [ GitHub-Actions-32-HW-one ]
+    branches: [ GitHub-Actions-32-HW-First ]
   pull_request:
-    branches: [ GitHub-Actions-32-HW-one ]
+    branches: [ GitHub-Actions-32-HW-First ]
 
 jobs:
   playwright:
