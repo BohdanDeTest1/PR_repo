@@ -1,0 +1,16 @@
+{
+    "validUser": {
+        "name": "John",
+        "lastName": "Doe",
+        "email": "aqa-john.doe@test.com",
+        "password": "ValidPass123"
+    },
+    "invalidUser": {
+        "name": "A",
+        "lastName": "A",
+        "email": "invalidemail",
+        "password": "short",
+        "wrongEmail": "wrongemail@example.com",
+        "wrongPassword": "wrongpassword"
+    }
+}
